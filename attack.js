@@ -11,7 +11,6 @@ class attack {
     */
 
     constructor(host) {
-    host = getUrl(host);
         this.host = host;
       }
 
@@ -54,7 +53,7 @@ this.run =  setInterval(function () {
     var time = ((new Date).getTime() - self.t)/1000;
     if (time >= self.s)
       clearInterval(self.run);
-  },500);
+  },580);
 }
 
 
@@ -62,11 +61,6 @@ this.run =  setInterval(function () {
 }
 
 
-
-function getUrl(host) {
-  host +='/';
-  return host.replace(/\/+$/,'/');
-}
 
 function getUserAgent() {
   var users = [
@@ -81,8 +75,8 @@ function getUserAgent() {
 }
 
 
-function getH(n) {
-  return ('2467zzasSSSLlKKFKKHKHKGKKK9596999').repeat(n || 50);
+function getH() {
+  return ('2467zzasSSSLlKKFKKHKHKGKKK9596999').repeat(50);
 }
 
 module.exports = attack;
