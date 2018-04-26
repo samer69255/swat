@@ -28,7 +28,7 @@ blow() {
   'x-cross-5':getH()
   }
       var options = {
-        url:this.host,
+        url:this.host='/?page='+getH()+'&q='+getH(),
         headers:headers
       }
       Req.get(options,function (err, response, body) {
@@ -53,7 +53,7 @@ this.run =  setInterval(function () {
     var time = ((new Date).getTime() - self.t)/1000;
     if (time >= self.s)
       clearInterval(self.run);
-  },580);
+  },200);
 }
 
 
