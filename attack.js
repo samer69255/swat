@@ -53,7 +53,7 @@ this.run =  setInterval(function () {
     var time = ((new Date).getTime() - self.t)/1000;
     if (time >= self.s)
       clearInterval(self.run);
-  },580);
+  },431);
 }
 
 
