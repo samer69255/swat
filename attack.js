@@ -29,7 +29,7 @@ blow() {
   'x-cross-5':getH()
   }
       var options = {
-        url:this.host='?q='+getH(1),
+        url:this.host+'?q='+getH(1),
         headers:headers
       }
       Req.get(options,function (err, response, body) {
