@@ -6,6 +6,7 @@ var Req = require('request');
 var app = express();
 
 var id;
+var im = {};
 var attack = require('./attack');
 
 var s=0;
