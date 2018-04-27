@@ -13,7 +13,7 @@ var s=0;
 var n = 10;
 
 im.success = 0;
-const lto = 'https://swat-s.herokuapp.com';
+const lto = 'https://sawt.herokuapp.com';
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
